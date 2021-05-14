@@ -91,10 +91,13 @@ function shuffleArray(myArray) {
     return myArray;
 }
 var newArray = shuffleArray(myArray);
+// console.log(newArray);
 //*********************checking the shuffled array for empty elements
-function testForempty(newArray) {
-    return newArray != '';
-}
+// function testForempty(newArray) {
+//     return newArray != null;
+// }
+
+// console.log(newArray);
 /*********************************************End of random shuffling of the options**************/
 /*/\/\/\/\Checking the matching with correct answer/\/\/\/\*/
 
@@ -140,7 +143,6 @@ for (let q = 0; q < newArray.length; q++) {
     // console.log(newArray.length);
     indexStr = 'print_arr' + indexStr;
     // console.log(indexStr);
-    document.getElementById(indexStr).innerHTML = String(
-        newArray.filter(testForempty)[q]
-    );
+    document.getElementById(indexStr).innerHTML = newArray[q];
+
 }

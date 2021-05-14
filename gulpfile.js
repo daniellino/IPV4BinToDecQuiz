@@ -39,25 +39,33 @@ function jsTask() {
     files.jsPath,
     //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
   ])
+    .pipe(sourcemaps.init())
     .pipe(babel())
+    .pipe(concat('main.js'))
     .pipe(
       uglify({
+        // mangle: { toplevel: true },
         compress: {
-          // drop_console: true,
-          //this option will strip oout console.log from JS code
           drop_console: false,
-          hoist_funs: false,
+          //this option will strip oout console.log from JS code
+          // drop_console: false,
+          drop_debugger: false,
+          // hoist_funs: false,
         },
         output: {
           //preventing from changing quote style
           quote_style: 2,
+          beautify: false,
+          // comments: true,
         },
-      }).pipe(
-        rename({
-          extname: '.min.js',
-        })
-      )
+      })
     )
+    .pipe(
+      rename({
+        extname: '.min.js',
+      })
+    )
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/js/'));
 }
 
