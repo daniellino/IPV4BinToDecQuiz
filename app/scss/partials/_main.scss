@@ -5,4 +5,211 @@ body {
 }
 .jumbotron{
   color: $WhiteText;
+  height: 1em;
+  padding: 3em 0;
 }
+
+body {
+  background-color: rgb(182, 187, 184);
+  font-size: 16;
+}
+
+h1 {
+  margin-top: -27px;
+}
+a {
+  text-decoration: none !important;
+  /* color: #28707b; */
+}
+.quest-binary {
+  padding: 1em 0 0;
+  font-size: 1.2em;
+}
+#binary-Value {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.5em 0 1em;
+}
+@keyframes answeredQuest {
+  0% {
+    color: #46f53b;
+  }
+
+  50% {
+    color: #378787;
+  }
+
+  to {
+    color: #1a405b;
+  }
+}
+
+.anim {
+  animation: answeredQuest 1.5s infinite;
+}
+
+#givenAns {
+  color: #fa849d;
+  font-size: 16px;
+}
+
+.btn_ans,
+.btn_reset {
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.btn_ans:hover {
+  transition: color 0.5s;
+  background-color: #327c9e !important;
+  color: #70d35c;
+}
+
+#questionField {
+  color: #ebab6b;
+  text-align: center;
+  margin: 0 4%;
+}
+
+#matchField {
+  font-size: 2em;
+  color: #17521a;
+}
+#correctAns {
+  color: #64fd5d;
+}
+
+#explainField {
+  font-family: calibri;
+  text-align: left;
+  font-size: 18px;
+  color: #ccdada;
+}
+
+.answersTable {
+  width: 100%;
+  margin: 0;
+}
+
+.quesCol {
+  width: 50%;
+}
+
+.answersTable tr {
+  background-color: #429dfd;
+}
+
+.answersTable div {
+  color: #302f2f;
+  padding: 2%;
+}
+
+.answersTable tr:nth-child(2n) {
+  background-color: #3a8cc3;
+}
+
+.answersTable td:hover {
+  transition: background-color 0.3s;
+  background-color: #2e77a8;
+}
+
+td a {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+
+.lettersCol {
+  padding: 0.6em;
+  text-align: center;
+  font-size: 28px;
+}
+
+#combAns {
+  color: #81c9f4;
+  font-size: 18px;
+  min-height: 2em;
+  /* margin: 1em 0; */
+  /* padding: 1em 0; */
+}
+
+#combAns,
+#myAns {
+  font-family: calibri;
+}
+
+#myAns {
+  display: none;
+  color: #e1d204;
+  font-size: 20px;
+}
+
+.corAns {
+  color: #2e0e1c;
+  background-color: #04ffc0;
+}
+
+.falseAns {
+  color: #fff;
+  background-color: red;
+}
+
+.deckAndNoteTable {
+  width: 100%;
+  margin: auto;
+}
+
+.deckAndNoteTable div {
+  font-family: Arial;
+  font-size: 8px;
+  color: #9da1ac;
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    font-size: 25px;
+  }
+
+  #print_arr1,
+  #print_arr2,
+  #print_arr3,
+  #print_arr4,
+  #print_arr5,
+  #print_arr6,
+  #questionField {
+    font-size: 28px;
+  }
+
+  #givenAns {
+    color: #fa849d;
+  }
+
+  #correctAns,
+  #givenAns {
+    font-size: 25px;
+  }
+
+  #combAns,
+  #explainField,
+  #myAns {
+    font-size: 28px;
+  }
+
+  .hint {
+    font-family: Arial;
+    font-size: 24px;
+    color: #359e75;
+  }
+
+  .deckAndNoteTable div {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
