@@ -8,6 +8,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const purgecss = require('gulp-purgecss')
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
@@ -28,7 +29,10 @@ function scssTask() {
   return src(files.scssPath)
     .pipe(sourcemaps.init()) // initialize sourcemaps first
     .pipe(sass()) // compile SCSS to CSS
-    .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(purgecss({
+      content: ['*.html']
+    })) // PostCSS plugins
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
     .pipe(dest('dist/css/')); // put final CSS in dist folder
 }
