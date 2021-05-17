@@ -96,7 +96,7 @@ function cacheBustTask() {
 function watchTask() {
   browserSync.init({
     notify: false, //prevents showing the message of browser sync
-    open: false, //prevents openning the browser tab
+    open: true, //prevents openning the browser tab
     server: {
       baseDir: './',
     },

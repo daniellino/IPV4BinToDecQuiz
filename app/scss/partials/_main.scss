@@ -44,7 +44,22 @@ a {
 .anim {
   animation: answeredQuest 1.5s infinite;
 }
+@keyframes timeUp_alert {
+  0% {
+    color: #f53b3b;
+  }
 
+  50% {
+    color: #2bff00;
+  }
+
+  to {
+    color: #ff0b0b;
+  }
+}
+.anim_alert{
+  animation: timeUp_alert .5s infinite;
+}
 .btn_ans,
 .btn_reset {
   color: #ffffff;

@@ -100,7 +100,23 @@ var newArray = shuffleArray(myArray);
 // console.log(newArray);
 /*********************************************End of random shuffling of the options**************/
 /*/\/\/\/\Checking the matching with correct answer/\/\/\/\*/
-
+/*******************timer*********************** */
+let t = 0
+let timerNum = setInterval(printSec, 1000);
+// console.log(timerNum);
+function printSec() {
+    if (t < 30) {
+        t++;
+        document.getElementById('timer-value').innerHTML = t;
+    } else {
+        clearInterval(timerNum);
+        // console.log(`done!!`);
+        document.getElementById('timer-value').innerHTML = 'Time is up!';
+        document.querySelector(".timer-wraper").style.display = "none";
+        document.getElementById("timeUp").style.display = "block";
+    }
+}
+/*******************timer*********************** */
 function runToCheck() {
     // let hidTable = document.querySelector('.answersTable').style.display = 'none';
     //~~~~~~~~~~~~~~~~function definition for correct
